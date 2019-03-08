@@ -43,7 +43,11 @@ function addSponginess() {
         let p = $("<p>");
         $(p).text("Rating: " + results[i].rating.toUpperCase());
         let spongeyImage = $("<img>");
-        spongeyImage.attr("src", results[i].images.fixed_height.url);
+        spongeyImage.attr("src", results[i].images.fixed_height_still.url);
+        spongeyImage.attr("data-still", results[i].images.fixed_height_still.url);
+        spongeyImage.attr("data-animate", results[i].images.fixed_height.url);
+        spongeyImage.attr("data-state", "still");
+        spongeyImage.addClass("gif");
         spongeyDiv.append(title);
         spongeyDiv.append(p);
         spongeyDiv.append(spongeyImage);
@@ -55,8 +59,26 @@ function addSponginess() {
 
 };
 
+function toggle() {
+
+    state = $(this).attr("data-state");
+
+    if (state === "still") {
+      $(this).attr("src", $(this).attr("data-animate"));
+      $(this).attr("data-state", "animate");
+    }
+    
+    if (state === "animate") {
+      $(this).attr("src", $(this).attr("data-still"));
+      $(this).attr("data-state", "still");
+    }
+
+};
+
 generateButtons();
 
 $(document).on("click", "#add-topic", addTopic);
 
 $(document).on("click", ".spongey-topic", addSponginess);
+
+$(document).on("click", ".gif", toggle);
