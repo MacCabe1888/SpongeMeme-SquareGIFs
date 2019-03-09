@@ -26,7 +26,7 @@ function addTopic() {
 function addSponginess() {
 
     let sponginess = $(this).attr("spongey-data");
-    let queryURL = "https://api.giphy.com/v1/gifs/search?q=" + sponginess.toLowerCase() + "-spongebob-squarepants&api_key=" + config.apiKey + "&limit=10";
+    let queryURL = "https://api.giphy.com/v1/gifs/search?q=" + sponginess.toLowerCase() + "-spongebob-squarepants&api_key=" + config.apiKey + "&limit=12";
 
     $.ajax({
         url: queryURL,
@@ -39,7 +39,7 @@ function addSponginess() {
 
         let spongeyDiv = $("<div>");
         let title = $("<p>");
-        $(title).html("<br><br>" + results[i].title.toUpperCase());
+        $(title).html(results[i].title.toUpperCase());
         let p = $("<p>");
         $(p).text("Rating: " + results[i].rating.toUpperCase());
         let spongeyImage = $("<img>");
@@ -48,9 +48,13 @@ function addSponginess() {
         spongeyImage.attr("data-animate", results[i].images.fixed_height.url);
         spongeyImage.attr("data-state", "still");
         spongeyImage.addClass("gif");
-        spongeyDiv.append(title);
-        spongeyDiv.append(p);
+        let info = $("<div>");
+        info.addClass("info");
+        info.append(title);
+        info.append(p);
+        spongeyDiv.append(info);
         spongeyDiv.append(spongeyImage);
+        spongeyDiv.addClass("gif-div col-md-4");
         $("#gifs").prepend(spongeyDiv);
 
         }

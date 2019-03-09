@@ -1,0 +1,180 @@
+body{
+    background: url(../images/spongebob-wallpaper.jpg);
+}
+
+.jumbotron{
+    text-align: center;
+    background: url(../images/spongebob-floral-background.jpg);
+    background-repeat: repeat-x;
+    padding-bottom: 10px;
+    margin-top: -30px;
+}
+
+#spongememe{
+    width: 44.2%;
+    margin-top: 1.5%;
+    margin-right: 1.5%;
+}
+
+#squaregifs{
+    width: 40%;
+    margin-left: 1.5%;
+}
+
+.container{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+#button-generator{
+    display: flex;
+    flex-direction: row;
+    background: lightseagreen;
+    padding: 0.5%;
+    margin: 0 1.66666666667% 0 1.66666666667%;
+}
+
+input{
+    background: rgb(255, 255, 200);
+    margin-left: 5px;
+}
+
+#add-topic{
+    background: rgb(255, 255, 200);
+}
+
+#buttons{
+    background: lightseagreen;
+    margin: 0 1.66666666667% 0 1.66666666667%;
+}
+
+.spongey-topic{
+    background: rgb(255, 255, 125);
+    margin: 0.5%;
+}
+
+.gif-div{
+    display: flex;
+    justify-content: right;
+    background: lightseagreen;
+    width: 30%;
+    margin: 50px 1.66666666667% 0 1.66666666667%;
+}
+
+.info{
+    margin: 10px 10px 0 0;
+}
+
+.gif{
+    margin-right: -15px;
+}
+
+@media screen and (max-width: 1530px) {
+
+    #button-generator{
+        flex-wrap: wrap;
+    }
+
+    #click-prompt{
+        margin-top: 1%;
+    }
+
+}
+
+@media screen and (max-width: 1350px) {
+
+    .gif-div{
+        width: 45%;
+        margin: 50px 2.5% 0 2.5%;
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    .jumbotron{
+        margin-right: -200px;
+    }
+
+}
+
+@media screen and (min-width: 994px) {
+
+    #spongememe{
+        margin-top: 0.5%;
+    }
+
+    #squaregifs{
+        margin-top: -1%;
+    }
+
+}
+
+@media screen and (max-width: 993px) {
+
+    .jumbotron{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #squaregifs{
+        height: 75px;
+        margin-top: 15px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    #spongememe{
+        height: 60px;
+        margin-top: 25px;
+    }
+
+    #squaregifs{
+        height: 50px;
+        margin-top: 25px;
+    }
+
+}
+
+@media screen and (max-width: 570px) {
+
+    .jumbotron{
+        width: 570px;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .container{
+      width: 500px;
+      margin-left: 4%;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+    .jumbotron{
+        margin-right: -150px;
+    }
+
+}
+
+@media screen and (max-width: 370px) {
+
+    .jumbotron{
+        margin-right: -200px;
+    }
+
+}

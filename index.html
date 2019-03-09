@@ -9,22 +9,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!--link to Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!--link to Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!--link to local CSS file-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
     
+    <a class="jumbotron col-md-12">
+        <img id="spongememe" src="https://fontmeme.com/permalink/190308/901b73f28f19b327de9d60cbc25658e8.png" alt="spongememe">
+        <img id="squaregifs" src="https://fontmeme.com/permalink/190308/8f61250319d0e02be624e55e0defc875.png" alt="squaregifs">
+    </a>
+
     <div class="container">
 
-        <h1>SpongeMeme SquareGIFs</h1>
+        <form id="button-generator">
+            <div id="type-prompt">
+            <label for="spongey-input">Type something SpongeBob-y or SquarePants-related &nbsp;<i class="fas fa-hand-point-right"></i></label>
+            <input type="text" id="spongey-input"> ,&nbsp;
+            </div>
+            <div id="click-prompt">
+                <label for="button">then click the button to add your spongey topic! &nbsp;<i class="fas fa-hand-point-right"></i></label>
+                <input id="add-topic" type="submit" value="I'M READY ... to sponge up this page with some nautical nonsense!">
+            </div>
+        </form>
 
         <div id="buttons"></div>
-
-        <form id="button-generator">
-            <label for="spongey-input">Type something SpongeBob-y or SquarePants-related:</label>
-            <input type="text" id="spongey-input">
-            <input id="add-topic" type="submit" value="I'M READY ... to sponge up this page with some nautical nonsense!">
-        </form>
 
         <div id="gifs"></div>
 
